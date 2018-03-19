@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Dash Board</title>
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="background">
+        <form class="container width_dashboard" name="dashboard">
+            <div class="title p26">Dash Board</div>
+            <!--Add button start-->
+            <div>
+                <div class="container_btn btn_small" id="btn_addModal" onclick="addModal();">
+                    <div class="color_btn"></div>
+                    <button class="txt_btn" type="button">Add</button>
+                </div>
+            </div>
+            <!--Add button end-->
+            <hr />
+            <!--filter start-->
+            <table style="width:100%">
+                <!--filter list-->
+                <tr>
+                    <th align="left"><span class="label p11">filter</span></th>
+                    <th align="left">
+                        <!--type select-->
+                        <div>
+                            <span class="label p11">Type</span>
+                            <select id="dropdown_type">
+                                <option value="grocery">Grocery</option>
+                                <option value="office">Office Supply</option>
+                                <option value="electonic">Electonic</option>
+                                <option value="movie">Movie</option>
+                            </select>
+                        </div>
+                    </th>
+                    <th align="left"><span class="label p11">location </span>
+                    <input id="Text1" type="text" /></th>
+                    <th align="left">
+                        <!--month select-->
+                        <div>
+                            <span class="label p11">month</span>
+                            <select id="dropdown_type">
+                                <option value="1">JANUARY</option>
+                                <option value="2">FEBUARY</option>
+                                <option value="3">MARCH</option>
+                                <option value="4">APRIL</option>
+                                <option value="5">MAY</option>
+                                <option value="6">JUN</option>
+                                <option value="7">JULY</option>
+                                <option value="8">AUGUST</option>
+                                <option value="9">SEPTEMBER</option>
+                                <option value="10">OCTOBER</option>
+                                <option value="11">NOVEMBER</option>
+                                <option value="12">DECEMBER</option>
+                            </select>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+            <!--fileter end-->
+            <hr />
+            <!--transaction start-->
+            <div>
+                <table style="width:100%">
+                    <!--list title-->
+                    <tr>
+                        <th align="left"><span class="label p11">Transaction Types</span></th>
+                        <th align="left"><span class="label p11">Location</span></th>
+                        <th align="left"><span class="label p11">Date</span></th>
+                    </tr>
+                    <!--list1-->
+                    <tr>
+                        <td align="left"><span class="label p11 capital_upper">Grocery</span></td>
+                        <td align="left"><span class="label p11 capital_upper">Sobey, Waterloo</span></td>
+                        <td align="left"><span class="label p11 capital_upper">02-01-2018</span></td>
+                    </tr>
+                    <!--list2-->
+                    <tr>
+                        <td align="left"><span class="label p11 capital_upper">Office Supply</span></td>
+                        <td align="left"><span class="label p11 capital_upper">Stables, Kitchener</span></td>
+                        <td align="left"><span class="label p11 capital_upper">09-01-2018</span></td>
+                    </tr>
+                    <!--list3-->
+                    <tr>
+                        <td align="left"><span class="label p11 capital_upper">Electonic</span></td>
+                        <td align="left"><span class="label p11 capital_upper">Best Buy, Cambridge</span></td>
+                        <td align="left"><span class="label p11 capital_upper">17-01-2018</span></td>
+                    </tr>
+                    <!--list4-->
+                    <tr>
+                        <td align="left"><span class="label p11 capital_upper">Movie</span></td>
+                        <td align="left"><span class="label p11 capital_upper">Walmart, Waterloo</span></td>
+                        <td align="left"><span class="label p11 capital_upper">03-02-2018</span></td>
+                    </tr>
+                </table>
+            </div>
+            <!--transaction end-->
+        </form>
+    </div>
+    <!--Add Popup Start-->
+    <div>
+        <div id="add" class="modal" style="display:none;">
+            <div class="container width_login " name="addform" onsubmit="return addSubmit();">
+                <div class="title p26">Add Transcation</div>
+                <!--type-->
+                <div>
+                    <!--type select-->
+                    <div class="p11">
+                        <span class="label p11">Type</span>
+                        <select id="dropdown_type">
+                            <option value="grocery">Grocery</option>
+                            <option value="office">Office Supply</option>
+                            <option value="electonic">Electonic</option>
+                            <option value="movie">Movie</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <!--month select-->
+                    <div class="p11">
+                        <span class="label p11">month</span>
+                        <select id="dropdown_type">
+                            <option value="1">JANUARY</option>
+                            <option value="2">FEBUARY</option>
+                            <option value="3">MARCH</option>
+                            <option value="4">APRIL</option>
+                            <option value="5">MAY</option>
+                            <option value="6">JUN</option>
+                            <option value="7">JULY</option>
+                            <option value="8">AUGUST</option>
+                            <option value="9">SEPTEMBER</option>
+                            <option value="10">OCTOBER</option>
+                            <option value="11">NOVEMBER</option>
+                            <option value="12">DECEMBER</option>
+                        </select>
+                    </div>
+                </div>
+                <!--location-->
+                <div class="p11">
+                    <span class="label p11">Location</span>
+                    <div class="wrap_input">
+                        <input class="input" type="text" name="location" id="location" />
+                    </div>
+                </div>
+                <!--description-->
+                <div class="p11">
+                    <span class="label p11">Description</span>
+                    <div class="wrap_input">
+                        <input class="input" type="text" name="description" id="description" />
+                    </div>
+                </div>
+                <!--amount-->
+                <div class="p11">
+                    <span class="label p11">Amount</span>
+                    <div class="wrap_input">
+                        <input class="input" type="text" name="amount" id="amount" />
+                    </div>
+                </div>
+                <!--Add Submit-->
+                <div class="container_btn">
+                    <div class="color_btn"></div>
+                    <button class="txt_btn" type="submit" onclick="addSubmit();">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Add Popup End-->
+    <script src="js/main.js"></script>
+</body>
+</html>

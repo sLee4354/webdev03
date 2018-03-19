@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <!--page-->
+    <div class="background">
+        <div>
+            <!--button-->
+            <div class="container_btn" style="width:200px;">
+                <div class="color_btn"></div>
+                <button class="txt_btn"  id="btn_login" type="submit" onclick="loginModal();">Login</button>
+                <button class="txt_btn" id="btn_register" type="submit" onclick="registerModal();">Register</button>
+            </div>
+        </div>
+        <!--login popup-->
+        <div id="login" class="modal" style="display:none;">
+            <form class="container width_login " name="loginform" onsubmit="return loginSubmit();">
+                <div class="title p26">Login</div>
+                <!--username-->
+                <div>
+                    <span class="label p11">Username</span>
+                    <div class="wrap_input">
+                        <input class="input" type="text" name="username" id="username" />
+                    </div>
+                </div>
+                <!--password-->
+                <div>
+                    <span class="label p11">Password</span>
+                    <div class="wrap_input">
+                        <input class="input" type="password" name="password" id="password" />
+                    </div>
+                </div>
+                <!--button-->
+                <div class="container_btn">
+                    <div class="color_btn"></div>
+                    <button class="txt_btn" type="submit">Login</button>
+                </div>
+                <!--create account-->
+                <div class="center_text p115">
+                    <span class="message_text">Don’t have an account?</span>
+                    <a style="font-style:italic;" onclick="registerModal();">Sign up</a>
+                </div>
+            </form>
+        </div>
+        <!--register popup-->
+        <div id="register" class="modal" style="display:none;">
+            <form class="container width_login p15" name="registerform" onsubmit="return registerSubmit();">
+                <div class="title p26">Register</div>
+                <table>
+                    <tr>
+                        <!--username-->
+                        <td colspan="2">
+                        <div>
+                            <span class="label p11">Username</span>
+                            <div class="wrap_input">
+                                <input class="input" type="text" name="username" id="register_username" />
+                            </div>
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--first name-->
+                        <td>
+                            <div>
+                                <span class="label p11">First Name</span>
+                                <div class="wrap_input">
+                                    <input class="input" type="text" name="firstname" id="register_firstname"/>
+                                </div>
+                            </div>
+                        </td>
+                        <!--last name-->
+                        <td>
+                            <div>
+                                <span class="label p11">Last Name</span>
+                                <div class="wrap_input">
+                                    <input class="input" type="text" name="lastname" id="register_lastname"/>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--password-->
+                        <td colspan="2">
+                            <div>
+                                <span class="label p11">Password</span>
+                                <div class="wrap_input">
+                                    <input class="input" type="password" name="password" id="register_password" />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- confirm password-->
+                        <td colspan="2">
+                            <div>
+                                <span class="label p11">Confirm Password</span>
+                                <div class="wrap_input">
+                                    <input class="input" type="password" name="confirmpassword" id="register_confirmpassword" />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--email-->
+                        <td colspan="2">
+                            <div>
+                                <span class="label p11">Email</span>
+                                <div class="wrap_input">
+                                    <input class="input" type="email" name="email" id="register_email" />
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--button-->
+                        <td colspan="2">
+                            <div class="container_btn">
+                                <div class="color_btn"></div>
+                                <button class="txt_btn" type="submit">Register</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
